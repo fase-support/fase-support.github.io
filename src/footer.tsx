@@ -1,9 +1,9 @@
-"use client"
 
-export function Footer() {
+export default function Footer() {
     return (
         <div>
-            <footer data-tid="footer" className="footer sm:footer-horizontal bg-base-100 text-base-content px-10 pt-4 pb-2">
+            {/* <footer data-tid="footer" className="footer sm:footer-horizontal bg-base-100 text-base-content px-10 pt-4 pb-2"> */}
+            <footer style={{display: "flex", justifyContent: "center", background: "lightGrey"}}>
                 <nav className="items-center">
                     <h6 data-tid="contactUsCol" className="footer-title">ISIS</h6>
                     <a className="link link-hover"
@@ -56,17 +56,6 @@ export function Footer() {
                        href="https://www.user-software-statements.stfc.ac.uk/Pages/Users-Accessibility-Statement.aspx">
                         Accessibility Statement
                     </a>
-                </nav>
-            </footer>
-            <footer data-tid="secondaryFooter" className="footer sm:footer-horizontal bg-base-100 text-base-content border-base-300 border-t px-10 py-2">
-                <nav>
-                    <span data-tid="icons8Credit">
-                        Icons by&nbsp;
-                        <a className="link"
-                           data-tid="icons8Link"
-                           href="https://icons8.com">Icons8
-                        </a>
-                    </span>
                 </nav>
             </footer>
         </div>
