@@ -8,7 +8,7 @@ interface DocumentProps {
 
 export default function Document({ docName }: DocumentProps) {
 
-    // console.log("Document: " + props.docName)
+    console.log("Creating Document: " + docName)
 
     return (
         <div>

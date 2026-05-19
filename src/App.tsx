@@ -1,8 +1,8 @@
 import { useState, useEffect, type ReactElement } from 'react'
 import stfcLogo from './assets/stfcLogo.png'
 import ICARUSLogo from './assets/ICARUSlogo.png'
-import Footer from './Footer'
-import Tile from './Tile'
+import Footer from './Footer.tsx'
+import Tile from './Tile.tsx'
 import getAvailableDocs from './docLoader'
 import Document from './Document'
 
@@ -45,14 +45,14 @@ function App() {
 
 
   function handleTileClick(tileName: string){
-    console.log("handleTileClick with " + tileName)
+    console.log("handleTileClick with: " + tileName)
     setCategory(tileName)
 
     // Find the matching docs with the Filter and then map to document objects to display
     const docs = docData.filter((doc) => doc.Category === tileName).map(
       (doc) => {
-        // console.log("Going through data?")
-        // console.log(doc)
+        console.log("Create training docs based on category " + tileName)
+        console.log(doc)
         return (
           <Document
             key={doc.ID}
@@ -82,15 +82,15 @@ function App() {
   )
 
   function handleDataLoaded(results: DocDataType[]) {
-    console.log("Loaded doc data")
-    // console.log(results)
-    // console.log(results.data)
+    console.log("handleDataLoaded with: ")
+    console.log(results)
     setDocData(results)
   }
 
   // This is in a useEffect as only want to load it once on page load,
   // not on a re-render
   useEffect(() => {
+    console.log("Intial data load")
     getAvailableDocs(handleDataLoaded)
   }, [])
 

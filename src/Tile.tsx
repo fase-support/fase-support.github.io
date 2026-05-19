@@ -6,7 +6,7 @@ interface TileProps {
 
 export default function Tile({text, imagePath, handleClicked}: TileProps) {
 
-    // console.log("Tile with " + props.text)
+    console.log("Creating Tile: " + text)
 
     return (
         <div onClick={() => handleClicked(text)} /* Anonymous function use to pass the argument back to the callback */>    
