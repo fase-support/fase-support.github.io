@@ -3,7 +3,7 @@ import stfcLogo from './assets/stfcLogo.png'
 import ICARUSLogo from './assets/ICARUSlogo.png'
 import Footer from './Footer.tsx'
 import Tile from './Tile.tsx'
-import getAvailableDocs from './docLoader'
+import getAvailableDocs from './docLoader.ts'
 import Document from './Document'
 
 import ISISProposalsTile from './assets/ISISProposalsTile.png';

@@ -1,3 +1,4 @@
+// @ts-ignore
 import Papa from 'papaparse';
 
 interface PapaResultsData {
