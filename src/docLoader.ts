@@ -14,6 +14,7 @@ interface PapaResults {
   data: PapaResultsData[]
 }
 
+//Changed
 const csvFilePath = './data/docIndex.csv'
 
 export default function getAvailableDocs(handleResults: (res: PapaResultsData[]) => void) {
