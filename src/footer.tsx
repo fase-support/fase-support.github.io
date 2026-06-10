@@ -3,7 +3,7 @@ export default function Footer() {
     return (
         <div>
             {/* <footer data-tid="footer" className="footer sm:footer-horizontal bg-base-100 text-base-content px-10 pt-4 pb-2"> */}
-            <footer style={{display: "flex", justifyContent: "center", background: "lightGrey"}}>
+            <footer style={{display: "flex", justifyContent: "center"}}>
                 <nav className="items-center">
                     <h6 data-tid="contactUsCol" className="footer-title">ISIS</h6>
                     <a className="link link-hover"

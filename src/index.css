@@ -1,5 +1,5 @@
 :root {
-  --text: #6b6375;
+  --text-h: #08060d;
   --text-h: #08060d;
   --bg: #fff;
   --border: #e5e4e7;
@@ -95,54 +95,41 @@ h2 {
   }
 }
 p {
-  padding: 25px;
+  padding: 15px;
   margin: 0;
   clear: both;
 }
 
 .stfcLogo
 {
-  height: 3rem;
-  float: right;
+  height: 5rem;
+  float: left;
 }
 
 .icarusLogo
 {
-  height: 10rem;
-  float: left;
+  height: 5rem;
+  float: right;
 }
 
-code,
-.counter {
-  font-family: var(--mono);
-  display: inline-flex;
-  border-radius: 4px;
-  color: var(--text-h);
-}
-
-code {
-  font-size: 15px;
-  line-height: 135%;
-  padding: 4px 8px;
-  background: var(--code-bg);
-}
-
-.tilesPane li {
-  position: relative;
-  font-size: 1rem;
-  height: 150px;
-  width: 140px;
-  float: left;
-  margin-right: 20px;
-}
-
-.downFitTiles
+.news
 {
-  position: absolute;
-  bottom: 0;
-  text-align: center;
-  width: 100%;
+  font-weight: bold;
+  color: #6b6375;
 }
+
+
+.tileClicker
+{
+  cursor: pointer;
+}
+
+.tileClicker.selected 
+{
+    border: 2px solid #007bff; /* Adds a blue highlight border */
+    background-color: #e6f2ff;  /* Adds a subtle blue background tint */
+}
+
 
 #docListPane
 {
