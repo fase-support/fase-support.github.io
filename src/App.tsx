@@ -27,25 +27,26 @@ interface DocDataType {
 
 function App() {
   const [docData, setDocData] = useState<DocDataType[]>([]);
-  const [category, setCategory] = useState("");
+  const [category, setCategory] = useState(""); // 1. This state already tracks the selected name!
   const [documents, setDocuments] = useState<ReactElement[]>([])
 
   const faseApps = [
-  { name: 'ISIS Proposals', tile: ISISProposalsTile },
-  { name: 'CLF Proposals', tile: CLFProposalsTile },
-  { name: 'Visits', tile: VisitsTile },
-  { name: 'Scheduler', tile: SchedulerTile },
-  { name: 'Risk Assessments', tile: RiskAssessmentsTile },
-  { name: 'Safety Tests', tile: SafetyTestsTile },
-  { name: 'ISIS Consumables', tile: ISISCosumablesTile },
-  { name: 'Data Catalogue', tile: DataCatalogueTile },
-  { name: 'Ada', tile: AdaTile },
-  { name: 'Experiment Reports', tile: ExperimentReportsTile },
+    { name: 'ISIS Proposals', tile: ISISProposalsTile },
+    { name: 'CLF Proposals', tile: CLFProposalsTile },
+    { name: 'Visits', tile: VisitsTile },
+    { name: 'Scheduler', tile: SchedulerTile },
+    { name: 'Risk Assessments', tile: RiskAssessmentsTile },
+    { name: 'Safety Tests', tile: SafetyTestsTile },
+    { name: 'ISIS Consumables', tile: ISISCosumablesTile },
+    { name: 'Data Catalogue', tile: DataCatalogueTile },
+    { name: 'Ada', tile: AdaTile },
+    { name: 'Experiment Reports', tile: ExperimentReportsTile },
   ];
-
 
   function handleTileClick(tileName: string){
     console.log("handleTileClick with: " + tileName)
+
+    // 2. Setting this triggers a re-render, which will update the highlights automatically
     setCategory(tileName)
 
     // Find the matching docs with the Filter and then map to document objects to display
@@ -68,6 +69,7 @@ function App() {
     setDocuments(docs)
   }
 
+  // 3. Updated the mapping logic to pass down the 'isSelected' prop
   const tiles = faseApps.map(
     (app) => {
       return (
@@ -76,6 +78,7 @@ function App() {
           handleClicked={handleTileClick}
           text={app.name}
           imagePath={app.tile}
+          isSelected={category === app.name} // Returns true if this tile matches the active state
         />
       )
     }
@@ -87,23 +90,23 @@ function App() {
     setDocData(results)
   }
 
-  // This is in a useEffect as only want to load it once on page load,
-  // not on a re-render
   useEffect(() => {
     console.log("Intial data load")
     getAvailableDocs(handleDataLoaded)
   }, [])
 
-
   return (
     <>
       <section>
         <div className="hero">
-          <img src={ ICARUSLogo } className="icarusLogo" alt="Icarus logo" />
           <img src={ stfcLogo } className="stfcLogo" alt="stfc logo" />
+          <img src={ ICARUSLogo } className="icarusLogo" alt="Icarus logo" />
         </div>
         <div>
           <h1></h1>
+          <p className='news'>
+            This site is currently under development.
+          </p>
           <p>
             Please choose an app to view support documentation
           </p>
@@ -114,7 +117,6 @@ function App() {
         <div style={{display: "flex", flexWrap: "wrap", justifyContent: "center", alignItems: "center"}}>
           { tiles }
         </div>
-        
       </section>
 
       <section>
@@ -124,10 +126,9 @@ function App() {
         </div>
       </section>
 
-    <section style={{ marginTop: "5em"}}>
+    <section style={{ marginTop: "25em"}}>
         <Footer />
      </section>
-
     </>
   )
 }
