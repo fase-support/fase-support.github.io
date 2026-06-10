@@ -146,3 +146,13 @@ section
 {
   flex-grow: 1;
 }
+
+nav
+{
+  margin-right: 25px;
+}
+
+nav a
+{
+  display: block;
+}
