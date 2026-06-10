@@ -126,7 +126,7 @@ function App() {
         </div>
       </section>
 
-    <section style={{ marginTop: "25em"}}>
+    <section style={{ marginTop: "20em"}}>
         <Footer />
      </section>
     </>
