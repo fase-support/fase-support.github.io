@@ -1,3 +1,4 @@
+// @ts-ignore
 import Papa from 'papaparse';
 
 interface PapaResultsData {
@@ -13,7 +14,9 @@ interface PapaResults {
   data: PapaResultsData[]
 }
 
-const csvFilePath = '/data/docIndex.csv'
+//Changed to public path
+//const csvFilePath = './data/docIndex.csv'
+const csvFilePath = import.meta.env.BASE_URL + 'data/docIndex.csv';
 
 export default function getAvailableDocs(handleResults: (res: PapaResultsData[]) => void) {
 
