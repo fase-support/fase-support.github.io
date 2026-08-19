@@ -1,14 +1,6 @@
 ID,Filename,Title,Description,Category
 1,ISIS FAP Reviewer_Review a Proposal.pdf,ISIS FAP Reviewer_Review a Proposal,Explains how to perform a Technical Review for an ISIS Proposal,ISIS Proposals
-2,ISIS FAP Secretary_Tasks.pdf,ISIS FAP Secretary Tasks,"Describes ISIS FAP Secretary Tasks, including, how to assign reviewers",ISIS Proposals
-3,ISIS User Documentation for Proposals.pdf,ISIS User Documentation for Proposals,"Provides an overview of the Proposal System, includinging how to create and manage your proposals in ISIS",ISIS Proposals
-4,ISIS Perform Technical Review.pdf,ISIS Perform Technical Review,Explains how to perform a Technical Review,ISIS Proposals
-5,ISIS Xpress Review Proposal.pdf,ISIS Xpress Review Proposal,Illustrates how to review a proposal in ISIS Xpress,ISIS Proposals
-6,CLF User Documentation for Proposals.pdf,CLF User Documentation for Proposals,"Provides an overview of the Proposal System, includiing how to create and manage your proposals in CLF",CLF Proposals
-7,HPL FAP Reviewer_Review a Proposal.pdf,HPL FAP Reviewer_Review a Proposal,Illustrates how to perform a FAP Review for HPL,CLF Proposals
-8,HPL FAP Secretary_Tasks.pdf,HPL FAP Secretary Tasks,"Describes HPL FAP Secretary Tasks, including, how to assign reviewers",CLF Proposals
-9,HPL Perform Technical Review.pdf,HPL Perform Technical Review,Explains how to perform a Technical Review for HPL,CLF Proposals
-10,LSF FAP Reviewer_Review a Proposal.pdf,LSF FAP Reviewer Review a Proposal,Illustrates how to perform a FAP Review for LSF Xpress,CLF Proposals
-11,LSF FAP Secretary_Tasks.pdf,LSF FAP Secretary Tasks,"Describes LSF FAP Secretary Tasks, including, how to assign reviewers",CLF Proposals
-12,LSF Perform Technical Review.pdf,LSF Perform Technical Review,Explains how to perform a Technical Review for an LSF Proposal,CLF Proposals
-13,LSF Xpress Review a Proposal.pdf,LSF Xpress Review a Proposal,Illustrates how to perform a FAP Review for LSF Xpress,CLF Proposals
+2,ISIS User Documentation for Proposals.pdf,ISIS User Documentation for Proposals,"Provides an overview of the Proposal System, includinging how to create and manage your proposals in ISIS",ISIS Proposals
+3,CLF User Documentation for Proposals.pdf,CLF User Documentation for Proposals,"Provides an overview of the Proposal System, includiing how to create and manage your proposals in CLF",CLF Proposals
+4,HPL FAP Reviewer_Review a Proposal.pdf,HPL FAP Reviewer_Review a Proposal,Illustrates how to perform a FAP Review for HPL,CLF Proposals
+5,LSF FAP Reviewer_Review a Proposal.pdf,LSF FAP Reviewer Review a Proposal,Illustrates how to perform a FAP Review for LSF Xpress,CLF Proposals
