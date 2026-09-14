@@ -13,7 +13,7 @@ export default function Tile({text, imagePath, isSelected, handleClicked}: TileP
         <div className={`tileClicker ${isSelected ? 'selected' : ''}`} 
             onClick={() => handleClicked(text)} /* Anonymous function use to pass the argument back to the callback */
             >    
-            <div style={{ textDecoration: 'none', color: '#007bff', fontWeight: 'bold' }} >
+            <div style={{ textDecoration: 'none', color: '#000', fontWeight: 'bold' }} >
                 {text} 
             </div>
 
