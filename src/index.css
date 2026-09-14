@@ -116,7 +116,11 @@ p {
 .news
 {
   font-weight: bold;
-  color: #6b6375;
+  color: #fff;
+  line-height: 75px;
+  min-height: 75px;
+  background-image: url('src/assets/blue-separator.dda35e7a.svg');
+  background-size: cover;
 }
 
 
@@ -127,8 +131,9 @@ p {
 
 .tileClicker.selected 
 {
-    border: 2px solid #007bff; /* Adds a blue highlight border */
-    background-color: #e6f2ff;  /* Adds a subtle blue background tint */
+    /** border: 2px solid #007bff; **/
+    background-color: #ff9d1b;  /* Adds a subtle blue background tint */
+    color: black;
 }
 
 
