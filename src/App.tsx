@@ -14,7 +14,6 @@ import ExperimentReportsTile from './assets/ExperimentReportsTile.png';
 import ISISCosumablesTile from './assets/ISISCosumablesTile.png';
 import RiskAssessmentsTile from './assets/RiskAssessmentsTile.png';
 import SafetyTestsTile from './assets/SafetyTestsTile.png';
-import SchedulerTile from './assets/SchedulerTile.png';
 import VisitsTile from './assets/VisitsTile.png';
 
 interface DocDataType {
@@ -34,7 +33,6 @@ function App() {
     { name: 'ISIS Proposals', tile: ISISProposalsTile },
     { name: 'CLF Proposals', tile: CLFProposalsTile },
     { name: 'Visits', tile: VisitsTile },
-    { name: 'Scheduler', tile: SchedulerTile },
     { name: 'Risk Assessments', tile: RiskAssessmentsTile },
     { name: 'Safety Tests', tile: SafetyTestsTile },
     { name: 'ISIS Consumables', tile: ISISCosumablesTile },
@@ -43,13 +41,13 @@ function App() {
     { name: 'Experiment Reports', tile: ExperimentReportsTile },
   ];
 
+  const noArticle = "No documentation yet";
+
   function handleTileClick(tileName: string){
     console.log("handleTileClick with: " + tileName)
 
-    // 2. Setting this triggers a re-render, which will update the highlights automatically
     setCategory(tileName)
 
-    // Find the matching docs with the Filter and then map to document objects to display
     const docs = docData.filter((doc) => doc.Category === tileName).map(
       (doc) => {
         console.log("Create training docs based on category " + tileName)
@@ -69,7 +67,6 @@ function App() {
     setDocuments(docs)
   }
 
-  // 3. Updated the mapping logic to pass down the 'isSelected' prop
   const tiles = faseApps.map(
     (app) => {
       return (
@@ -114,16 +111,18 @@ function App() {
       </section>
 
       <section >
-        <div style={{display: "flex", flexWrap: "wrap", justifyContent: "center", alignItems: "center"}}>
+        <div style={{display: "flex", flexWrap: "wrap", justifyContent: "center", alignItems: "center", gap: "20px"}}>
           { tiles }
         </div>
       </section>
 
       <section>
-        <div style={{ display: (documents.length != 0 ? 'block' : 'none')}}>
-          <h1>{ category }</h1>
-          { documents.length != 0 ? documents : null }
-        </div>
+        {category && category.trim() !== "" && (
+          <div style={{ marginTop: "50px" }}>
+            <h1>{documents.length === 0 ? noArticle : category}</h1>
+            {documents.length !== 0 ? documents : null}
+          </div>
+        )}
       </section>
 
     <section style={{ marginTop: "20em"}}>
