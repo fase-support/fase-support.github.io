@@ -6,7 +6,7 @@ interface DocumentProps {
     category: string
 }
 
-export default function Document({ docName, fileName }: DocumentProps) {
+export default function Document({ docName, fileName, description }: DocumentProps) {
 
     console.log("Creating Document: " + docName)
 
@@ -14,9 +14,10 @@ export default function Document({ docName, fileName }: DocumentProps) {
         <div>
             <a 
                 href={`/data/${fileName}`} 
-                target="_blank" 
+                target="_blank"
+                title={description}
                 rel="noopener noreferrer" 
-                style={{ textDecoration: "none", color: "#007bff", fontWeight: "bold" }}
+                style={{ textDecoration: "none", color: "#282675", fontWeight: "bolder" }}
             >
                 📄 { docName }
             </a>

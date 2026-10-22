@@ -7,7 +7,7 @@ interface TileProps {
 
 export default function Tile({text, imagePath, isSelected, handleClicked}: TileProps) {
 
-    console.log("Creating Tile: " + text)
+    //console.log("Creating Tile: " + text)
 
     return (
         <div className={`tileClicker ${isSelected ? 'selected' : ''}`} 
@@ -19,7 +19,8 @@ export default function Tile({text, imagePath, isSelected, handleClicked}: TileP
 
             <img 
                 src={imagePath} 
-                style={{ width: "200px" }}
+                style={{ width: "100px" }}
+                alt={imagePath}
             />
         </div>
     )
